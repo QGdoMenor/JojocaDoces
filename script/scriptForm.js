@@ -41,7 +41,7 @@ form.addEventListener("submit", (event) => {
     const inputName2 = encodeURIComponent(namePara.value);
     const inputMessage = encodeURIComponent(textMessage.value.replace(/\n/g, "<br>"));
 
-    const urlDestino = `https://paulocesar26.github.io/sistemaSimplesJS/dados.html?nameDe=${inputName1}&namePara=${inputName2}&message=${inputMessage}`;
+    const urlDestino = `https://qgdomenor.github.io/JojocaDoces/dados.html?nameDe=${inputName1}&namePara=${inputName2}&message=${inputMessage}`;
 
     localStorage.setItem("nameDe", nameDe.value);
     localStorage.setItem("namePara", namePara.value);
