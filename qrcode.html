@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo01.ico" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> 
+    <link rel="stylesheet" href="css/styleQR.css">
+    <title>Mensagem</title>
+</head>
+<body>
+    <div class="container-qr">
+        <div id="qrcode"></div>
+    </div>
+
+    <button onclick="window.print()">Imprimir QR Code</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const linkDestino = urlParams.get("link"); // Recupera o link enviado
+
+            if(linkDestino){
+                new QRCode(document.getElementById("qrcode"), {
+                    text: linkDestino,
+                    width: 300,
+                    height: 300,
+                    correctLevel: QRCode.CorrectLevel.L
+                });
+            } 
+            else{
+                document.getElementById("qrcode").innerHTML = "<p>Erro ao gerar QR Code.</p>";
+            }
+        });
+    </script>
+</body>
+</html>
