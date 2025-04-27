@@ -43,7 +43,7 @@ form.addEventListener("submit", (event) => {
 
     const urlDestino = `https://qgdomenor.github.io/JojocaDoces/dados.html?nameDe=${inputName1}&namePara=${inputName2}&message=${inputMessage}`;
 
-    localStorage.setItem("nameDe", nameDe.value);
+    localStorage.setItem("nameDe", nameDe.value); 
     localStorage.setItem("namePara", namePara.value);
     localStorage.setItem("message", textMessage.value);
 
